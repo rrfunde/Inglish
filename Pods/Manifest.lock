@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.3.0)
+  - MobilePlayer (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.3)
+  - MobilePlayer
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  MobilePlayer: 069b13482499f14c25b6ce53f63a91e17975b073
+
+PODFILE CHECKSUM: 42d49d31c96aafafd13bb846e5af7d6d3e4f9e51
+
+COCOAPODS: 1.1.1
