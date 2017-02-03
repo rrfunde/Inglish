@@ -189,7 +189,7 @@
 				TargetAttributes = {
 					5B4ABA791E227F620091F15F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JZUGP59T9Q;
+						DevelopmentTeam = 87CT3T3CK2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -407,10 +407,11 @@
 			baseConfigurationReference = 27E52C468302DA2AA8E0BDE1 /* Pods-English Simplified.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JZUGP59T9Q;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = "English Simplified/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rrfunde.utilities.english.English-Simplified";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrfunde.utilities.english.Inglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -421,10 +422,11 @@
 			baseConfigurationReference = AF3BD2895EE7D600D8DBFB80 /* Pods-English Simplified.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JZUGP59T9Q;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = "English Simplified/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rrfunde.utilities.english.English-Simplified";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrfunde.utilities.english.Inglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
