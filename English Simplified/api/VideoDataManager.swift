@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  English Simplified
+//  VideoDataManager.swift
+//  Inglish
 //
 //  Created by Funde, Rohit on 1/22/17.
 //  Copyright © 2017 Funde, Rohit. All rights reserved.
@@ -8,15 +8,22 @@
 
 import Foundation
 import Alamofire
+
 class VideoDataManager {
     
-    static var videoDetails = [VideoDetail]()
+    static var videoDetails = [VideoDetail]()                                                   // Store video Details
+    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    static let logger = appDelegate.logger
     
     static func getDataFromServer(from: Int, to: Int, completion: @escaping () -> () = {}) {
         let parameters = "?from=" + String(from) + "&to=" + String(to)
         Alamofire.request(Constants.VIDEO_DATA_API + parameters).responseJSON {
             response in
-            print(response.request ?? 0)
+            logger.info(response.request)  // original URL request
+            logger.info(response.response) // HTTP URL response
+            logger.info(response.data)     // server data
+            logger.info(response.result)   // result of response serialization
+            logger.info(response.request)
             
             if let videoJSON = response.result.value {
                 if let videoData = videoJSON as? [[String: String]] {

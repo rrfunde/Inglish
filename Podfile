@@ -6,6 +6,6 @@ target 'English Simplified' do
   use_frameworks!
   pod 'MobilePlayer'
   pod 'Alamofire', '~> 4.3'
-
+  pod 'XCGLogger'
 end
 
