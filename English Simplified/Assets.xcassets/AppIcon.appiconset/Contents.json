@@ -1,33 +1,51 @@
 {
   "images" : [
     {
+      "size" : "20x20",
       "idiom" : "iphone",
-      "size" : "29x29",
+      "filename" : "rsz_1rsz_2screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "2x"
     },
     {
+      "size" : "20x20",
       "idiom" : "iphone",
-      "size" : "29x29",
+      "filename" : "rsz_2screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "3x"
     },
     {
+      "size" : "29x29",
       "idiom" : "iphone",
-      "size" : "40x40",
+      "filename" : "rsz_3screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "2x"
     },
     {
+      "size" : "29x29",
       "idiom" : "iphone",
-      "size" : "40x40",
+      "filename" : "rsz_4screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "3x"
     },
     {
+      "size" : "40x40",
       "idiom" : "iphone",
-      "size" : "60x60",
+      "filename" : "rsz_1rsz_4screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "2x"
     },
     {
+      "size" : "40x40",
       "idiom" : "iphone",
+      "filename" : "rsz_5screen_shot_2017-02-13_at_44129_pm.png",
+      "scale" : "3x"
+    },
+    {
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "rsz_5screen_shot_2017-02-13_at_44129_pm-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "rsz_screen_shot_2017-02-13_at_44129_pm.png",
       "scale" : "3x"
     }
   ],
