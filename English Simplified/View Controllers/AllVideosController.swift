@@ -40,7 +40,7 @@ class AllVideosController: UITableViewController {
         let videoImageUrl = VideoDataManager.videoDetails[indexPath.row].imageUrl
 
         let videoDuration = VideoDataManager.videoDetails[indexPath.row].duration
-        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
+//        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
         cell.videoImage.downloadAndSetImage(link: videoImageUrl)
         cell.videoDuration.text = videoDuration
         return cell
@@ -48,7 +48,7 @@ class AllVideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = Constants.YOUTUBE_BASE_URL + VideoDataManager.videoDetails[indexPath.row].videoId
+        let videoUrl = APIConstants.YOUTUBE_BASE_URL + VideoDataManager.videoDetails[indexPath.row].videoId
         let videoTitle = VideoDataManager.videoDetails[indexPath.row].title
         let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
         playerVC.title = videoTitle
