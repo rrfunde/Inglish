@@ -10,9 +10,10 @@ import UIKit
 import MobilePlayer
 
 class AllVideosController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
             self.doTableRefresh()
         })
