@@ -15,9 +15,17 @@ class VideoDetail {
     var duration: String
     
     init(videoId: String, title: String, imageUrl: String, duration: String) {
+        var seconds: String
+        var minutes: String
+        
         self.videoId = videoId
         self.title = title
         self.imageUrl = imageUrl
-        self.duration = duration
+
+        var time = duration.characters.split(separator: ":").map(String.init)
+        seconds = time[1].characters.count > 1 ? time[1] : "0" + time[1]
+        minutes = time[0].characters.count > 1 ? time[0] : "0" + time[0]
+        self.duration = minutes + ":"
+        self.duration.append(seconds)
     }
 }
