@@ -16,6 +16,11 @@ class AllVideosController: UITableViewController {
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
             self.doTableRefresh()
         })
+        
+        let url = NSURL(string: "https://www.youtube.com/watch?v=AdOxohhO_Pc")!
+        
+        YTFPlayer.initYTF(url: url, tableCellNibName: "videoCell", delegate: self, dataSource: self)
+        YTFPlayer.showYTFView(viewController: self)
     }
 
     override func didReceiveMemoryWarning() {
