@@ -13,7 +13,7 @@ class YTFViewController: UIViewController {
     
     @IBOutlet weak var play: UIButton!
     @IBOutlet weak var fullscreen: UIButton!
-    @IBOutlet weak var playerView: PlayerView!
+    @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewContainer: UIView!
     @IBOutlet weak var minimizeButton: YTFPopupCloseButton!
@@ -36,27 +36,6 @@ class YTFViewController: UIViewController {
     var dragginSlider: Bool = false
     var isMinimized: Bool = false
     var hideTimer: Timer?
-    var currentUrlIndex: Int = 0 {
-        didSet {
-            if (playerView != nil) {
-                // Finish playing all items
-                if (currentUrlIndex >= (urls?.count)!) {
-                    // Go back to first tableView item to loop list
-                    currentUrlIndex = 0
-                    selectFirstRowOfTable()
-                } else {
-                    playIndex(index: currentUrlIndex)
-                }
-            }
-        }
-    }
-    var urls: [NSURL]? {
-        didSet {
-            if (playerView != nil) {
-                currentUrlIndex = 0
-            }
-        }
-    }
     
     var playerControlsFrame: CGRect?
     var playerViewFrame: CGRect?
@@ -86,7 +65,6 @@ class YTFViewController: UIViewController {
     override func viewDidLoad() {
         initPlayerWithURLs()
         initViews()
-        playerView.delegate = self
         super.viewDidLoad()
         
     }
@@ -104,8 +82,6 @@ class YTFViewController: UIViewController {
         let playerVars = ["playsinline" : 1, "controls" : 0, "showinfo" : 0]
         videoView.load(withVideoId: "GazC3A4OQTE", playerVars: playerVars)
         videoView.playVideo()
-        
-        playIndex(index: currentUrlIndex)
     }
     
     func initViews() {

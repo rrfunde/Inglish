@@ -13,7 +13,6 @@ public struct YTFPlayer {
         if (dragViewController == nil) {
             dragViewController = YTFViewController(nibName: "YTFViewController", bundle: nil)
         }
-        dragViewController?.urls = [url]
         dragViewController?.delegate = delegate
         dragViewController?.dataSource = dataSource
         dragViewController?.tableCellNibName = tableCellNibName
@@ -23,7 +22,6 @@ public struct YTFPlayer {
         if (dragViewController == nil) {
             dragViewController = YTFViewController(nibName: "YTFViewController", bundle: nil)
         }
-        dragViewController?.urls = urls
         dragViewController?.delegate = delegate
         dragViewController?.dataSource = dataSource
         dragViewController?.tableCellNibName = tableCellNibName
@@ -48,29 +46,7 @@ public struct YTFPlayer {
             })
         }
     }
-    
-    public static func changeURL(url: NSURL) {
-        dragViewController?.urls = [url]
-    }
-    
-    public static func changeURLs(urls: [NSURL]) {
-        dragViewController?.urls = urls
-    }
-    
-    public static func changeCurrentIndex(index: Int) {
-        dragViewController?.currentUrlIndex = index
-    }
-    
-    public static func playIndex(index: Int) {
-        dragViewController?.currentUrlIndex = index
-        dragViewController?.playIndex(index: index)
-        dragViewController?.hidePlayerControls(dontAnimate: true)
-    }
-    
-    public static func getIndex() -> Int {
-        return dragViewController!.currentUrlIndex
-    }
-    
+        
     public static func isOpen() -> Bool {
         return dragViewController?.isOpen == true ? true : false
     }

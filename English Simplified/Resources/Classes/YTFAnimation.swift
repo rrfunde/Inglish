@@ -405,7 +405,6 @@ extension YTFViewController {
     
     func removeViews() {
         self.view.removeFromSuperview()
-        self.playerView.resetPlayer()
         self.playerView.removeFromSuperview()
         self.tableView.removeFromSuperview()
         self.tableViewContainer.removeFromSuperview()

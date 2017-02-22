@@ -12,7 +12,6 @@
 		51D6D0FB1E56E1BA005F3C27 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 51D6D0FA1E56E1BA005F3C27 /* YTPlayer.html */; };
 		51E8B3531E5D2A9900E3159C /* YTFPlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */; };
 		51F7843A1E56A2850001E196 /* CustomProgressSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784331E56A2850001E196 /* CustomProgressSlider.swift */; };
-		51F7843B1E56A2850001E196 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784341E56A2850001E196 /* PlayerView.swift */; };
 		51F7843C1E56A2850001E196 /* YTFAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784351E56A2850001E196 /* YTFAnimation.swift */; };
 		51F7843D1E56A2850001E196 /* YTFPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784361E56A2850001E196 /* YTFPlayer.swift */; };
 		51F7843F1E56A2850001E196 /* YTFPopupCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784381E56A2850001E196 /* YTFPopupCloseButton.swift */; };
@@ -49,7 +48,6 @@
 		51D6D0FD1E56E6C1005F3C27 /* English_Simplified-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "English_Simplified-Bridging-Header.h"; path = "Support Files/English_Simplified-Bridging-Header.h"; sourceTree = "<group>"; };
 		51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YTFPlayerControls.swift; path = Resources/Classes/YTFPlayerControls.swift; sourceTree = "<group>"; };
 		51F784331E56A2850001E196 /* CustomProgressSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomProgressSlider.swift; path = Resources/Classes/CustomProgressSlider.swift; sourceTree = "<group>"; };
-		51F784341E56A2850001E196 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerView.swift; path = Resources/Classes/PlayerView.swift; sourceTree = "<group>"; };
 		51F784351E56A2850001E196 /* YTFAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YTFAnimation.swift; path = Resources/Classes/YTFAnimation.swift; sourceTree = "<group>"; };
 		51F784361E56A2850001E196 /* YTFPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YTFPlayer.swift; path = Resources/Classes/YTFPlayer.swift; sourceTree = "<group>"; };
 		51F784381E56A2850001E196 /* YTFPopupCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YTFPopupCloseButton.swift; path = Resources/Classes/YTFPopupCloseButton.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 			children = (
 				51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */,
 				51F784331E56A2850001E196 /* CustomProgressSlider.swift */,
-				51F784341E56A2850001E196 /* PlayerView.swift */,
 				51F784351E56A2850001E196 /* YTFAnimation.swift */,
 				51F784361E56A2850001E196 /* YTFPlayer.swift */,
 				51F784381E56A2850001E196 /* YTFPopupCloseButton.swift */,
@@ -397,7 +394,6 @@
 				51F7843A1E56A2850001E196 /* CustomProgressSlider.swift in Sources */,
 				5B4E00A21E34ED06006195B3 /* VideoDataManager.swift in Sources */,
 				51E8B3531E5D2A9900E3159C /* YTFPlayerControls.swift in Sources */,
-				51F7843B1E56A2850001E196 /* PlayerView.swift in Sources */,
 				5B4ABA801E227F620091F15F /* ViewController.swift in Sources */,
 				51F7843C1E56A2850001E196 /* YTFAnimation.swift in Sources */,
 				51F7843D1E56A2850001E196 /* YTFPlayer.swift in Sources */,
