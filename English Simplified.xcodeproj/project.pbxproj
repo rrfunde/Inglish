@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		332792780CC50E708103C740 /* Pods_English_Simplified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */; };
 		518D092E1E56C5C7001B94CD /* YTFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518D092D1E56C5C7001B94CD /* YTFViewController.xib */; };
+		51CF3A5F1E5D5A840094C6B6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51CF3A5C1E5D5A840094C6B6 /* Info.plist */; };
+		51CF3A601E5D5A840094C6B6 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF3A5D1E5D5A840094C6B6 /* YouTubePlayer.swift */; };
+		51CF3A611E5D5A840094C6B6 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 51CF3A5E1E5D5A840094C6B6 /* YTPlayer.html */; };
 		51D6D0FB1E56E1BA005F3C27 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 51D6D0FA1E56E1BA005F3C27 /* YTPlayer.html */; };
 		51E8B3531E5D2A9900E3159C /* YTFPlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */; };
 		51F7843A1E56A2850001E196 /* CustomProgressSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F784331E56A2850001E196 /* CustomProgressSlider.swift */; };
@@ -44,6 +47,9 @@
 		27E52C468302DA2AA8E0BDE1 /* Pods-English Simplified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.debug.xcconfig"; sourceTree = "<group>"; };
 		3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_English_Simplified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		518D092D1E56C5C7001B94CD /* YTFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTFViewController.xib; sourceTree = "<group>"; };
+		51CF3A5C1E5D5A840094C6B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/YouTubePlayer/Info.plist; sourceTree = "<group>"; };
+		51CF3A5D1E5D5A840094C6B6 /* YouTubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YouTubePlayer.swift; path = Resources/YouTubePlayer/YouTubePlayer.swift; sourceTree = "<group>"; };
+		51CF3A5E1E5D5A840094C6B6 /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = YTPlayer.html; path = Resources/YouTubePlayer/YTPlayer.html; sourceTree = "<group>"; };
 		51D6D0FA1E56E1BA005F3C27 /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = YTPlayer.html; sourceTree = "<group>"; };
 		51D6D0FD1E56E6C1005F3C27 /* English_Simplified-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "English_Simplified-Bridging-Header.h"; path = "Support Files/English_Simplified-Bridging-Header.h"; sourceTree = "<group>"; };
 		51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YTFPlayerControls.swift; path = Resources/Classes/YTFPlayerControls.swift; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		51CF3A5B1E5D5A550094C6B6 /* YouTubePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				51CF3A5C1E5D5A840094C6B6 /* Info.plist */,
+				51CF3A5D1E5D5A840094C6B6 /* YouTubePlayer.swift */,
+				51CF3A5E1E5D5A840094C6B6 /* YTPlayer.html */,
+			);
+			name = YouTubePlayer;
+			sourceTree = "<group>";
+		};
 		51D6D0FC1E56E67E005F3C27 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +127,7 @@
 		51F7842F1E56A1DA0001E196 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51CF3A5B1E5D5A550094C6B6 /* YouTubePlayer */,
 				51F784301E56A1DF0001E196 /* YTFPlayer */,
 			);
 			name = Resources;
@@ -148,11 +165,11 @@
 		51F784321E56A1F00001E196 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */,
 				51F784331E56A2850001E196 /* CustomProgressSlider.swift */,
 				51F784351E56A2850001E196 /* YTFAnimation.swift */,
 				51F784361E56A2850001E196 /* YTFPlayer.swift */,
 				51F784381E56A2850001E196 /* YTFPopupCloseButton.swift */,
+				51E8B3521E5D2A9900E3159C /* YTFPlayerControls.swift */,
 				51F784391E56A2850001E196 /* YTFViewController.swift */,
 			);
 			name = Classes;
@@ -324,8 +341,10 @@
 				5B4ABA851E227F620091F15F /* Assets.xcassets in Resources */,
 				51F784521E56A28E0001E196 /* pause.png in Resources */,
 				5B4ABA831E227F620091F15F /* Main.storyboard in Resources */,
+				51CF3A611E5D5A840094C6B6 /* YTPlayer.html in Resources */,
 				518D092E1E56C5C7001B94CD /* YTFViewController.xib in Resources */,
 				51F784571E56A28E0001E196 /* unfullscreen@2x.png in Resources */,
+				51CF3A5F1E5D5A840094C6B6 /* Info.plist in Resources */,
 				51D6D0FB1E56E1BA005F3C27 /* YTPlayer.html in Resources */,
 				51F784541E56A28E0001E196 /* play.png in Resources */,
 				51F784531E56A28E0001E196 /* pause@2x.png in Resources */,
@@ -396,6 +415,7 @@
 				51E8B3531E5D2A9900E3159C /* YTFPlayerControls.swift in Sources */,
 				5B4ABA801E227F620091F15F /* ViewController.swift in Sources */,
 				51F7843C1E56A2850001E196 /* YTFAnimation.swift in Sources */,
+				51CF3A601E5D5A840094C6B6 /* YouTubePlayer.swift in Sources */,
 				51F7843D1E56A2850001E196 /* YTFPlayer.swift in Sources */,
 				5B4E00A81E34F0FE006195B3 /* VideoDetail.swift in Sources */,
 				5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */,

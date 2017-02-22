@@ -380,8 +380,10 @@ extension YTFViewController {
             }, completion: { finished in
                 self.isMinimized = false
                 self.minimizeButton.isHidden = false
-                self.playerView.removeGestureRecognizer(self.playerTapGesture!)
-                self.playerTapGesture = nil
+                if let playerGesture = self.playerTapGesture {
+                    self.playerView.removeGestureRecognizer(playerGesture)
+                    self.playerTapGesture = nil
+                }
                 self.playerTapGesture = UITapGestureRecognizer(target: self, action: #selector(YTFViewController.showPlayerControls))
                 self.playerView.addGestureRecognizer(self.playerTapGesture!)
                 self.tableViewContainer.backgroundColor = UIColor.black

@@ -78,10 +78,11 @@ class YTFViewController: UIViewController {
             expandViews()
         }
         
+        videoView.delegate = self
+        
         videoView.isUserInteractionEnabled = false
         let playerVars = ["playsinline" : 1, "controls" : 0, "showinfo" : 0]
         videoView.load(withVideoId: "GazC3A4OQTE", playerVars: playerVars)
-        videoView.playVideo()
     }
     
     func initViews() {
@@ -89,8 +90,11 @@ class YTFViewController: UIViewController {
         self.view.alpha = 0.0
         playerControlsView.alpha = 0.0
         backPlayerControlsView.alpha = 0.0
+        self.fullscreen.setImage(UIImage(named: "fullscreen"), for: .normal)
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(YTFViewController.panAction(recognizer:)))
         playerView.addGestureRecognizer(gesture)
+        self.playerTapGesture = UITapGestureRecognizer(target: self, action: #selector(YTFViewController.showPlayerControls))
+        self.playerView.addGestureRecognizer(self.playerTapGesture!)
         
         tableView.delegate = delegate
         tableView.dataSource = dataSource

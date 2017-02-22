@@ -17,10 +17,10 @@ extension YTFViewController {
         videoView.playerState()
         
         if (videoView.playerState() == YTPlayerState.playing) {
-            play.setImage(UIImage(named: "pause"), for: UIControlState.normal)
+//            play.setImage(UIImage(named: "pause"), for: .normal)
             videoView.pauseVideo()
         } else {
-            play.setImage(UIImage(named: "play"), for: UIControlState.normal)
+//            play.setImage(UIImage(named: "play"), for: .normal)
             videoView.playVideo()
         }
     }
@@ -40,8 +40,6 @@ extension YTFViewController {
     
     @IBAction func valueChangedSlider(sender: AnyObject) {
         
-        
-        
         print("CURRENT", videoView.currentTime())
         print("SLIDE", slider.value)
     }
@@ -49,4 +47,24 @@ extension YTFViewController {
     @IBAction func touchUpInsideSlider(sender: AnyObject) {
         dragginSlider = false
     }
+}
+
+extension YTFViewController: YTPlayerViewDelegate {
+    
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        videoView.playVideo()
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        
+        if state == .playing {
+            play.setImage(UIImage(named: "pause"), for: .normal)
+            isPlaying = true
+        } else {
+            play.setImage(UIImage(named: "play"), for: .normal)
+            isPlaying = false
+        }
+        
+    }
+    
 }
