@@ -35,19 +35,30 @@ extension YTFViewController {
     
     @IBAction func touchDragInsideSlider(sender: AnyObject) {
         dragginSlider = true
-        videoView.pauseVideo()
+//        videoView.pauseVideo()
     }
     
     
     @IBAction func valueChangedSlider(sender: AnyObject) {
         sliderValueChanged = true
-//        videoView.seek(toSeconds: slider.value, allowSeekAhead: false)
     }
     
     @IBAction func touchUpInsideSlider(sender: AnyObject) {
         dragginSlider = false
         videoView.seek(toSeconds: slider.value, allowSeekAhead: true)
-        videoView.playVideo()
+//        videoView.playVideo()
+    }
+    
+    @IBAction func touchUpOutsideSlider(sender: AnyObject) {
+        dragginSlider = false
+        videoView.seek(toSeconds: slider.value, allowSeekAhead: true)
+//        videoView.playVideo()
+    }
+    
+    @IBAction func touchDragOutsideSlider(sender: AnyObject) {
+        dragginSlider = false
+        videoView.seek(toSeconds: slider.value, allowSeekAhead: true)
+//        videoView.playVideo()
     }
 }
 
