@@ -35,27 +35,35 @@ extension YTFViewController {
     
     @IBAction func touchDragInsideSlider(sender: AnyObject) {
         dragginSlider = true
+        videoView.pauseVideo()
     }
     
     
     @IBAction func valueChangedSlider(sender: AnyObject) {
-        
-        print("CURRENT", videoView.currentTime())
-        print("SLIDE", slider.value)
+        sliderValueChanged = true
+//        videoView.seek(toSeconds: slider.value, allowSeekAhead: false)
     }
     
     @IBAction func touchUpInsideSlider(sender: AnyObject) {
         dragginSlider = false
+        videoView.seek(toSeconds: slider.value, allowSeekAhead: true)
+        videoView.playVideo()
     }
 }
 
 extension YTFViewController: YTPlayerViewDelegate {
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        setupSlider(with: Float(videoView.duration()))
         videoView.playVideo()
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        
+        /*if sliderValueChanged == true && state == .playing {
+            videoView.seek(toSeconds: slider.value, allowSeekAhead: true)
+            sliderValueChanged = false
+        }*/
         
         if state == .playing {
             play.setImage(UIImage(named: "pause"), for: .normal)
@@ -64,7 +72,13 @@ extension YTFViewController: YTPlayerViewDelegate {
             play.setImage(UIImage(named: "play"), for: .normal)
             isPlaying = false
         }
-        
     }
     
+    func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
+        let currentTime = Int(playTime)
+        
+        if (!dragginSlider && (Int(slider.value) != currentTime)) { // Change every second
+            slider.value = Float(currentTime)
+        }
+    }
 }

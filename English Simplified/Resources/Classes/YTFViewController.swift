@@ -34,6 +34,7 @@ class YTFViewController: UIViewController {
     var isPlaying: Bool = false
     var isFullscreen: Bool = false
     var dragginSlider: Bool = false
+    var sliderValueChanged: Bool = false
     var isMinimized: Bool = false
     var hideTimer: Timer?
     
@@ -82,7 +83,7 @@ class YTFViewController: UIViewController {
         
         videoView.isUserInteractionEnabled = false
         let playerVars = ["playsinline" : 1, "controls" : 0, "showinfo" : 0]
-        videoView.load(withVideoId: "GazC3A4OQTE", playerVars: playerVars)
+        videoView.load(withVideoId: "ROEIKn8OsGU", playerVars: playerVars)
     }
     
     func initViews() {
@@ -139,6 +140,12 @@ class YTFViewController: UIViewController {
         UIView.animate(withDuration: 0.5, animations: {
             self.tableView.scrollToRow(at: rowToSelect as IndexPath, at: .top, animated: false)
         })
+    }
+    
+    func setupSlider(with duration: Float, currentTime: Float = 0.0) {
+        slider.minimumValue = 0.0
+        slider.maximumValue = duration
+        slider.value = currentTime
     }
 }
 
