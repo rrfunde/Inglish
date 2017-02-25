@@ -43,6 +43,7 @@ class VideoDataManager {
                                 let videoDetail = VideoDetail(videoId: videoId, title: title, imageUrl: imageUrl, duration: duration)
                                 videoDetails.append(videoDetail)
                             }
+                            VideoDataController.storeVideos(videos: videoDetails)
                         }
                     }
                 case .failure(let error):
