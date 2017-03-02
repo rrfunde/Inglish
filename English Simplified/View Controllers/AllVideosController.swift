@@ -18,17 +18,15 @@ class AllVideosController: UITableViewController {
 
         if !(UserDefaults.standard.string(forKey: "firstOpen") != nil) {
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
-            UserDefaults.standard.set(true, forKey: "firstOpen")
             if let videosData = VideoDataController.retriveVideos() {
+                UserDefaults.standard.set(true, forKey: "firstOpen")
                 self.videos = videosData
                 self.doTableRefresh()
             }
         })
-        } else {
-            if let videosData = VideoDataController.retriveVideos() {
+        } else if let videosData = VideoDataController.retriveVideos() {
                 videos = videosData
                 self.doTableRefresh()
-            }
         }
     }
 
@@ -56,6 +54,8 @@ class AllVideosController: UITableViewController {
 //        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
         cell.videoImage.downloadAndSetImage(link: videoImageUrl)
         cell.videoDuration.text = videoDuration
+        
+//        cell.videoImage.addShadowEffect()
         return cell
     }
     
