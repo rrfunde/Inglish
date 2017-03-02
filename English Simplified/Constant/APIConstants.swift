@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Constants {
+class APIConstants {
     
     public static let YOUTUBE_BASE_URL = "https://www.youtube.com/watch?v="
-    public static let VIDEO_DATA_API = "http://192.168.3.5/ES/Api/getVideos.php"
+    public static let VIDEO_DATA_API = "http://learningsimplified.co/Inglish/api/getVideos.php"
 }

@@ -10,12 +10,26 @@ import UIKit
 import MobilePlayer
 
 class AllVideosController: UITableViewController {
-
+    
+    var videos: [VideoDetail] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if !(UserDefaults.standard.string(forKey: "firstOpen") != nil) {
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
-            self.doTableRefresh()
+            UserDefaults.standard.set(true, forKey: "firstOpen")
+            if let videosData = VideoDataController.retriveVideos() {
+                self.videos = videosData
+                self.doTableRefresh()
+            }
         })
+        } else {
+            if let videosData = VideoDataController.retriveVideos() {
+                videos = videosData
+                self.doTableRefresh()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,18 +43,17 @@ class AllVideosController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let x = VideoDataManager.videoDetails.count
-        return x
+        return videos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoCell
         
-        let videoImageUrl = VideoDataManager.videoDetails[indexPath.row].imageUrl
+        let videoImageUrl = videos[indexPath.row].imageUrl
 
-        let videoDuration = VideoDataManager.videoDetails[indexPath.row].duration
-        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
+        let videoDuration = videos[indexPath.row].duration
+//        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
         cell.videoImage.downloadAndSetImage(link: videoImageUrl)
         cell.videoDuration.text = videoDuration
         return cell
@@ -48,8 +61,8 @@ class AllVideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = Constants.YOUTUBE_BASE_URL + VideoDataManager.videoDetails[indexPath.row].videoId
-        let videoTitle = VideoDataManager.videoDetails[indexPath.row].title
+        let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].videoId
+        let videoTitle = videos[indexPath.row].title
         let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
         playerVC.title = videoTitle
         playerVC.activityItems = [videoUrl] 

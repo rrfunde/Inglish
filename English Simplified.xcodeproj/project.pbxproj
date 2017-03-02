@@ -8,35 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		332792780CC50E708103C740 /* Pods_English_Simplified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */; };
+		5B22A0811E61577000D67F92 /* VideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B22A07F1E61577000D67F92 /* VideoModel.xcdatamodeld */; };
+		5B22A0831E6158BA00D67F92 /* VideoDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22A0821E6158BA00D67F92 /* VideoDataController.swift */; };
 		5B4ABA7E1E227F620091F15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ABA7D1E227F620091F15F /* AppDelegate.swift */; };
-		5B4ABA801E227F620091F15F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ABA7F1E227F620091F15F /* ViewController.swift */; };
 		5B4ABA831E227F620091F15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4ABA811E227F620091F15F /* Main.storyboard */; };
 		5B4ABA851E227F620091F15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4ABA841E227F620091F15F /* Assets.xcassets */; };
 		5B4ABA881E227F620091F15F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4ABA861E227F620091F15F /* LaunchScreen.storyboard */; };
 		5B4E00A21E34ED06006195B3 /* VideoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00A11E34ED06006195B3 /* VideoDataManager.swift */; };
-		5B4E00A51E34ED8E006195B3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00A41E34ED8E006195B3 /* Constant.swift */; };
+		5B4E00A51E34ED8E006195B3 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00A41E34ED8E006195B3 /* APIConstants.swift */; };
 		5B4E00A81E34F0FE006195B3 /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00A71E34F0FE006195B3 /* VideoDetail.swift */; };
 		5B4E00AB1E34FF6F006195B3 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00AA1E34FF6F006195B3 /* UIImageView.swift */; };
+		5B57562B1E56B80D00336D00 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57562A1E56B80D00336D00 /* UIView.swift */; };
 		5BA3278D1E22865D00208CA6 /* AllVideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278C1E22865D00208CA6 /* AllVideosController.swift */; };
 		5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278F1E23A75F00208CA6 /* VideoCell.swift */; };
+		5BB171191E52DC24009B2434 /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB171181E52DC24009B2434 /* GeneralConstants.swift */; };
+		5BDE82301E446846006B71AB /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDE822F1E446846006B71AB /* ErrorCodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27E52C468302DA2AA8E0BDE1 /* Pods-English Simplified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.debug.xcconfig"; sourceTree = "<group>"; };
 		3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_English_Simplified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B22A0801E61577000D67F92 /* VideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoModel.xcdatamodel; sourceTree = "<group>"; };
+		5B22A0821E6158BA00D67F92 /* VideoDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDataController.swift; path = Model/VideoDataController.swift; sourceTree = "<group>"; };
 		5B4ABA7A1E227F620091F15F /* English Simplified.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "English Simplified.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4ABA7D1E227F620091F15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B4ABA7F1E227F620091F15F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B4ABA821E227F620091F15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B4ABA841E227F620091F15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4ABA871E227F620091F15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B4ABA891E227F620091F15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4E00A11E34ED06006195B3 /* VideoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDataManager.swift; path = api/VideoDataManager.swift; sourceTree = "<group>"; };
-		5B4E00A41E34ED8E006195B3 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Constant/Constant.swift; sourceTree = "<group>"; };
+		5B4E00A41E34ED8E006195B3 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = Constant/APIConstants.swift; sourceTree = "<group>"; };
 		5B4E00A71E34F0FE006195B3 /* VideoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDetail.swift; path = Model/VideoDetail.swift; sourceTree = "<group>"; };
 		5B4E00AA1E34FF6F006195B3 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extension/UIImageView.swift; sourceTree = "<group>"; };
+		5B57562A1E56B80D00336D00 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extension/UIView.swift; sourceTree = "<group>"; };
 		5BA3278C1E22865D00208CA6 /* AllVideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllVideosController.swift; path = "View Controllers/AllVideosController.swift"; sourceTree = "<group>"; };
 		5BA3278F1E23A75F00208CA6 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "Custom Views/VideoCell.swift"; sourceTree = "<group>"; };
+		5BB171181E52DC24009B2434 /* GeneralConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneralConstants.swift; path = Constant/GeneralConstants.swift; sourceTree = "<group>"; };
+		5BDE822F1E446846006B71AB /* ErrorCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorCodes.swift; path = Constant/ErrorCodes.swift; sourceTree = "<group>"; };
 		AF3BD2895EE7D600D8DBFB80 /* Pods-English Simplified.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.release.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +90,7 @@
 		5B4ABA7C1E227F620091F15F /* English Simplified */ = {
 			isa = PBXGroup;
 			children = (
+				5BDE82311E44730F006B71AB /* Utility */,
 				5B4E00A91E34FF4F006195B3 /* Extension */,
 				5B4E00A61E34F08B006195B3 /* Model */,
 				5B4E00A31E34ED74006195B3 /* Constant */,
@@ -108,7 +117,9 @@
 		5B4E00A31E34ED74006195B3 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				5B4E00A41E34ED8E006195B3 /* Constant.swift */,
+				5B4E00A41E34ED8E006195B3 /* APIConstants.swift */,
+				5BDE822F1E446846006B71AB /* ErrorCodes.swift */,
+				5BB171181E52DC24009B2434 /* GeneralConstants.swift */,
 			);
 			name = Constant;
 			sourceTree = "<group>";
@@ -116,7 +127,9 @@
 		5B4E00A61E34F08B006195B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B22A0821E6158BA00D67F92 /* VideoDataController.swift */,
 				5B4E00A71E34F0FE006195B3 /* VideoDetail.swift */,
+				5B22A07F1E61577000D67F92 /* VideoModel.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4E00AA1E34FF6F006195B3 /* UIImageView.swift */,
+				5B57562A1E56B80D00336D00 /* UIView.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -132,7 +146,6 @@
 		5BA3278B1E22861100208CA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5B4ABA7F1E227F620091F15F /* ViewController.swift */,
 				5BA3278C1E22865D00208CA6 /* AllVideosController.swift */,
 			);
 			name = "View Controllers";
@@ -144,6 +157,13 @@
 				5BA3278F1E23A75F00208CA6 /* VideoCell.swift */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		5BDE82311E44730F006B71AB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		8891A00F397D85FD0C96578F /* Frameworks */ = {
@@ -189,7 +209,7 @@
 				TargetAttributes = {
 					5B4ABA791E227F620091F15F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JZUGP59T9Q;
+						DevelopmentTeam = 9WKJAPQ2A2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -278,14 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB171191E52DC24009B2434 /* GeneralConstants.swift in Sources */,
 				5B4E00AB1E34FF6F006195B3 /* UIImageView.swift in Sources */,
+				5B22A0811E61577000D67F92 /* VideoModel.xcdatamodeld in Sources */,
+				5B57562B1E56B80D00336D00 /* UIView.swift in Sources */,
 				5B4E00A21E34ED06006195B3 /* VideoDataManager.swift in Sources */,
-				5B4ABA801E227F620091F15F /* ViewController.swift in Sources */,
 				5B4E00A81E34F0FE006195B3 /* VideoDetail.swift in Sources */,
+				5BDE82301E446846006B71AB /* ErrorCodes.swift in Sources */,
 				5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */,
 				5BA3278D1E22865D00208CA6 /* AllVideosController.swift in Sources */,
+				5B22A0831E6158BA00D67F92 /* VideoDataController.swift in Sources */,
 				5B4ABA7E1E227F620091F15F /* AppDelegate.swift in Sources */,
-				5B4E00A51E34ED8E006195B3 /* Constant.swift in Sources */,
+				5B4E00A51E34ED8E006195B3 /* APIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -394,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -406,11 +430,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27E52C468302DA2AA8E0BDE1 /* Pods-English Simplified.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JZUGP59T9Q;
+				DEVELOPMENT_TEAM = 9WKJAPQ2A2;
 				INFOPLIST_FILE = "English Simplified/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rrfunde.utilities.english.English-Simplified";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrfunde.utilities.English;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -420,11 +445,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF3BD2895EE7D600D8DBFB80 /* Pods-English Simplified.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JZUGP59T9Q;
+				DEVELOPMENT_TEAM = 9WKJAPQ2A2;
 				INFOPLIST_FILE = "English Simplified/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rrfunde.utilities.english.English-Simplified";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrfunde.utilities.English;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -452,6 +478,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B22A07F1E61577000D67F92 /* VideoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B22A0801E61577000D67F92 /* VideoModel.xcdatamodel */,
+			);
+			currentVersion = 5B22A0801E61577000D67F92 /* VideoModel.xcdatamodel */;
+			name = VideoModel.xcdatamodeld;
+			path = Model/VideoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5B4ABA721E227F620091F15F /* Project object */;
 }

@@ -10,86 +10,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "English Simplified/View Controllers/AllVideosController.swift"
-            timestampString = "506790670.128168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "English Simplified/View Controllers/AllVideosController.swift"
-            timestampString = "506790670.128168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "English Simplified/View Controllers/AllVideosController.swift"
-            timestampString = "506789418.777431"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "English Simplified/View Controllers/AllVideosController.swift"
-            timestampString = "506789418.777431"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "numberOfSections(in:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "English Simplified/api/VideoDataManager.swift"
-            timestampString = "506790670.128168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getDataFromServer(from:to:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "English Simplified/View Controllers/AllVideosController.swift"
             timestampString = "506789465.016539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -105,13 +25,13 @@
                   symbolName = "English_Simplified.AllVideosController.viewDidLoad () -&gt; ()"
                   moduleName = "English Simplified"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rohit.funde/Desktop/iOS/Apps/English%20Simplified/English%20Simplified/View%20Controllers/AllVideosController.swift"
-                  timestampString = "506789472.833997"
+                  urlString = "file:///Users/rohit.funde/Desktop/iOS/Apps/Inglish/Inglish%5BYoutubeApi%5D/English%20Simplified/View%20Controllers/AllVideosController.swift"
+                  timestampString = "508074760.335608"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "164">
+                  offsetFromSymbolStart = "158">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -120,13 +40,13 @@
                   symbolName = "English_Simplified.AllVideosController.(viewDidLoad () -&gt; ()).(closure #1)"
                   moduleName = "English Simplified"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rohit.funde/Desktop/iOS/Apps/English%20Simplified/English%20Simplified/View%20Controllers/AllVideosController.swift"
-                  timestampString = "506789472.835962"
+                  urlString = "file:///Users/rohit.funde/Desktop/iOS/Apps/Inglish/Inglish%5BYoutubeApi%5D/English%20Simplified/View%20Controllers/AllVideosController.swift"
+                  timestampString = "508074760.337664"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "35">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-English Simplified.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XCGLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17D591C677DE5906880F5689748A262F</key>
+		<key>362E95B816068454C1FA5DD3CA791372</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>362E95B816068454C1FA5DD3CA791372</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BD20C378974B7CDAA7545F6BB682EC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>AD666190D4145AC9FE643913F908B928</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB04AD51955C8DD57C963BAB004593A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
