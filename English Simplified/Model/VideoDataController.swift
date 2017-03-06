@@ -27,10 +27,11 @@ class VideoDataController: NSObject {
                 guard let title = video.value(forKey: "title") as? String,
                 let id = video.value(forKey: "id") as? String,
                 let duration = video.value(forKey: "duration") as? String,
-                    let imageUrl = video.value(forKey: "imageUrl") as? String else {
+                let imageUrl = video.value(forKey: "imageUrl") as? String,
+                let type = video.value(forKey: "videoType") as? Int16 else {
                         return
                 }
-                videos.append(VideoDetail(videoId: id, title: title, imageUrl: imageUrl, duration: duration))
+                videos.append(VideoDetail(id: id, title: title, imageUrl: imageUrl, duration: duration, type: type))
             }
         } catch let error as NSError {
             appDelegate.logger.error(error)
@@ -49,10 +50,10 @@ class VideoDataController: NSObject {
             let videoManagedObject = NSManagedObject(entity: entity,
                                                      insertInto: managedContext)
             videoManagedObject.setValue(video.title, forKey: "title")
-            videoManagedObject.setValue(video.videoId, forKey: "id")
+            videoManagedObject.setValue(video.id, forKey: "id")
             videoManagedObject.setValue(video.duration, forKey: "duration")
             videoManagedObject.setValue(video.imageUrl, forKey: "imageUrl")
-            
+            videoManagedObject.setValue(video.type, forKey: "videoType")
             do {
                 try managedContext.save()
             } catch let error as NSError {

@@ -21,6 +21,7 @@
 		5B57562B1E56B80D00336D00 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57562A1E56B80D00336D00 /* UIView.swift */; };
 		5BA3278D1E22865D00208CA6 /* AllVideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278C1E22865D00208CA6 /* AllVideosController.swift */; };
 		5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278F1E23A75F00208CA6 /* VideoCell.swift */; };
+		5BAC6CB21E6A91CF0042A6BC /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC6CB11E6A91CF0042A6BC /* BaseTabBarController.swift */; };
 		5BB171191E52DC24009B2434 /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB171181E52DC24009B2434 /* GeneralConstants.swift */; };
 		5BDE82301E446846006B71AB /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDE822F1E446846006B71AB /* ErrorCodes.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		5B57562A1E56B80D00336D00 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extension/UIView.swift; sourceTree = "<group>"; };
 		5BA3278C1E22865D00208CA6 /* AllVideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllVideosController.swift; path = "View Controllers/AllVideosController.swift"; sourceTree = "<group>"; };
 		5BA3278F1E23A75F00208CA6 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "Custom Views/VideoCell.swift"; sourceTree = "<group>"; };
+		5BAC6CB11E6A91CF0042A6BC /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = "View Controllers/BaseTabBarController.swift"; sourceTree = "<group>"; };
 		5BB171181E52DC24009B2434 /* GeneralConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneralConstants.swift; path = Constant/GeneralConstants.swift; sourceTree = "<group>"; };
 		5BDE822F1E446846006B71AB /* ErrorCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorCodes.swift; path = Constant/ErrorCodes.swift; sourceTree = "<group>"; };
 		AF3BD2895EE7D600D8DBFB80 /* Pods-English Simplified.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.release.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA3278C1E22865D00208CA6 /* AllVideosController.swift */,
+				5BAC6CB11E6A91CF0042A6BC /* BaseTabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */,
 				5BA3278D1E22865D00208CA6 /* AllVideosController.swift in Sources */,
 				5B22A0831E6158BA00D67F92 /* VideoDataController.swift in Sources */,
+				5BAC6CB21E6A91CF0042A6BC /* BaseTabBarController.swift in Sources */,
 				5B4ABA7E1E227F620091F15F /* AppDelegate.swift in Sources */,
 				5B4E00A51E34ED8E006195B3 /* APIConstants.swift in Sources */,
 			);

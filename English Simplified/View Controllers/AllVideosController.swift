@@ -9,10 +9,38 @@
 import UIKit
 import MobilePlayer
 
+enum videoType: Int16 {
+    case All = 0
+    case Favourite
+    case Watched
+}
 class AllVideosController: UITableViewController {
+
+//  MARK: Members
+    var allVideos = [VideoDetail]()
+    var favouriteVideos = [VideoDetail]()
+    var watchedVideos = [VideoDetail]()
+    var filterVideoBy = videoType.All.rawValue
+    var videos = [VideoDetail]()
+//  MARK: Actions
+    @IBAction func videoFilterChanged(_ sender: Any) {
+        if let segmentControl = sender as? UISegmentedControl {
+            let index = segmentControl.selectedSegmentIndex
+            switch Int16(index) {
+            case 0:
+                videos = allVideos
+            case 1:
+                videos = favouriteVideos
+            case 2:
+                videos = watchedVideos
+            default:
+                ()
+            }
+            self.doTableRefresh()
+        }
+    }
     
-    var videos: [VideoDetail] = []
-    
+//  MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,12 +48,27 @@ class AllVideosController: UITableViewController {
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
             if let videosData = VideoDataController.retriveVideos() {
                 UserDefaults.standard.set(true, forKey: "firstOpen")
-                self.videos = videosData
+                self.allVideos = videosData
+                self.favouriteVideos = videosData.filter {
+                    ($0 as VideoDetail).type == videoType.Favourite.rawValue
+                }
+                self.watchedVideos = videosData.filter {
+                    ($0 as VideoDetail).type == videoType.Watched.rawValue
+                }
+                self.videos = self.allVideos
+                
                 self.doTableRefresh()
             }
         })
         } else if let videosData = VideoDataController.retriveVideos() {
-                videos = videosData
+                allVideos = videosData
+                self.favouriteVideos = videosData.filter {
+                ($0 as VideoDetail).type == videoType.Favourite.rawValue
+            }
+                self.watchedVideos = videosData.filter {
+                ($0 as VideoDetail).type == videoType.Watched.rawValue
+            }
+            self.videos = allVideos
                 self.doTableRefresh()
         }
     }
@@ -61,7 +104,7 @@ class AllVideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].videoId
+        let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].id
         let videoTitle = videos[indexPath.row].title
         let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
         playerVC.title = videoTitle
@@ -75,7 +118,8 @@ class AllVideosController: UITableViewController {
         
         let favourite = UITableViewRowAction(style:.normal,title: "Favourite"){
              action, index in
-             print("favorite button tapped")
+             self.videos[index.row].type = 1
+             VideoDataController.storeVideos(videos: [self.videos[index.row]])
         }
         favourite.backgroundColor = UIColor.green
         
@@ -87,7 +131,8 @@ class AllVideosController: UITableViewController {
 
         let watched = UITableViewRowAction(style: .normal,title: "Watched"){
             action, index in
-            print("favorite button tapped")
+            self.videos[index.row].type = 1
+            VideoDataController.storeVideos(videos: [self.videos[index.row]])
         }
         watched.backgroundColor = UIColor.gray
 

@@ -40,7 +40,7 @@ class VideoDataManager {
                                 let imageUrl = video["imageUrl"]! as String
                                 let durationString = video["duration"]! as String                           // duration is in the format of 00M11 where 00 -> seconds and 11 -> minutes
                                 let duration = durationString.replacingOccurrences(of: "M", with: ":")
-                                let videoDetail = VideoDetail(videoId: videoId, title: title, imageUrl: imageUrl, duration: duration)
+                                let videoDetail = VideoDetail(id: videoId, title: title, imageUrl: imageUrl, duration: duration)
                                 videoDetails.append(videoDetail)
                             }
                             VideoDataController.storeVideos(videos: videoDetails)
