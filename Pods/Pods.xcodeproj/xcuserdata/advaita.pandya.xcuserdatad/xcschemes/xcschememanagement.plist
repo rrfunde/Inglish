@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MobilePlayer-MobilePlayer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MobilePlayer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-English Simplified.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YouTubeFloatingPlayer-YouTubeFloatingPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YouTubeFloatingPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>362E95B816068454C1FA5DD3CA791372</key>
+		<key>1538784DA0B26E9EC426071E1CF552D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>748DA5F7441EE3028791A9624D367C3F</key>
+		<key>772292A33FD6983D408D92FB2F97A5BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD666190D4145AC9FE643913F908B928</key>
+		<key>B2BD0738C2D5A44A7DA02A5C179F6C6D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CEBDB3EEFD529521CCEB00F866E2CDB9</key>
+		<key>CE56487C4E0F8BA0A4AB9676B876D420</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobilePlayer
+import YouTubeFloatingPlayer
 
 class AllVideosController: UITableViewController {
 
@@ -16,11 +16,6 @@ class AllVideosController: UITableViewController {
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
             self.doTableRefresh()
         })
-        
-        let url = NSURL(string: "https://www.youtube.com/watch?v=AdOxohhO_Pc")!
-        
-        YTFPlayer.initYTF(url: url, tableCellNibName: "videoCell", delegate: self, dataSource: self)
-        YTFPlayer.showYTFView(viewController: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,13 +48,10 @@ class AllVideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = Constants.YOUTUBE_BASE_URL + VideoDataManager.videoDetails[indexPath.row].videoId
-        let videoTitle = VideoDataManager.videoDetails[indexPath.row].title
-        let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
-        playerVC.title = videoTitle
-        playerVC.activityItems = [videoUrl] 
+        let videoID = VideoDataManager.videoDetails[indexPath.row].videoId
         
-        present(playerVC, animated: true, completion: {})
+        YTFPlayer.initYTF(videoID: videoID)
+        YTFPlayer.showYTFView(viewController: self)
     }
     
     
