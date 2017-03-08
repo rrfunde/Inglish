@@ -4,10 +4,11 @@
         <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isWatched" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="videoType" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Video" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Video" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

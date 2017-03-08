@@ -32,7 +32,6 @@
         <!--View Controller-->
         <scene sceneID="ukv-AS-Psl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qql-Rd-gbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="75e-IK-o36" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FMV-Fj-fra"/>
@@ -45,6 +44,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="1f4-i2-EUk"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qql-Rd-gbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="247" y="328"/>
         </scene>
@@ -59,7 +59,7 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLV-3M-62I" id="Qx9-hl-cT1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network error" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-0B-K0h">
@@ -123,7 +123,7 @@
                     <navigationItem key="navigationItem" id="0d4-5v-6Qc">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="poe-qK-gxe">
-                            <rect key="frame" x="82" y="7" width="212" height="30"/>
+                            <rect key="frame" x="81.5" y="7" width="212" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All"/>

@@ -12,14 +12,14 @@ import UIKit
 
 class VideoDataController: NSObject {
 
+//    MARK: static members
+    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    static let managedContext = appDelegate.persistentContainer.viewContext
 
     static func retriveVideos() -> [VideoDetail]? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
+
         var videos = [VideoDetail]()
         
-        let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: GeneralConstants.Database.ENTITY_NAME)
         do {
             let videosData = try managedContext.fetch(fetchRequest)
@@ -28,38 +28,49 @@ class VideoDataController: NSObject {
                 let id = video.value(forKey: "id") as? String,
                 let duration = video.value(forKey: "duration") as? String,
                 let imageUrl = video.value(forKey: "imageUrl") as? String,
-                let type = video.value(forKey: "videoType") as? Int16 else {
+                let isWatched = video.value(forKey: "isWatched") as? Bool,
+                let isFavourite = video.value(forKey: "isFavourite") as? Bool else {
                         return
                 }
-                videos.append(VideoDetail(id: id, title: title, imageUrl: imageUrl, duration: duration, type: type))
+                let objectID = video.objectID as NSManagedObjectID
+                videos.append(VideoDetail(id: id, title: title, imageUrl: imageUrl, duration: duration, isWatched: isWatched, isFavourite: isFavourite, managedObjectID: objectID))
             }
         } catch let error as NSError {
+            appDelegate.logger.error("failed to retrieve video data")
             appDelegate.logger.error(error)
         }
         return videos
     }
     
     static func storeVideos(videos: [VideoDetail]) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: GeneralConstants.Database.ENTITY_NAME, in: managedContext)!
 
-        videos.forEach { video in
-            let videoManagedObject = NSManagedObject(entity: entity,
+        if let entity = NSEntityDescription.entity(forEntityName: GeneralConstants.Database.ENTITY_NAME, in: managedContext) {
+
+            videos.forEach { video in
+                let videoManagedObject = NSManagedObject(entity: entity,
                                                      insertInto: managedContext)
-            videoManagedObject.setValue(video.title, forKey: "title")
-            videoManagedObject.setValue(video.id, forKey: "id")
-            videoManagedObject.setValue(video.duration, forKey: "duration")
-            videoManagedObject.setValue(video.imageUrl, forKey: "imageUrl")
-            videoManagedObject.setValue(video.type, forKey: "videoType")
-            do {
-                try managedContext.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
+                videoManagedObject.setValue(video.title, forKey: "title")
+                videoManagedObject.setValue(video.id, forKey: "id")
+                videoManagedObject.setValue(video.duration, forKey: "duration")
+                videoManagedObject.setValue(video.imageUrl, forKey: "imageUrl")
+                videoManagedObject.setValue(video.isFavourite, forKey: "isFavourite")
+                videoManagedObject.setValue(video.isWatched, forKey: "isWatched")
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    VideoDataManager.logger.error("Could not save. \(error), \(error.userInfo)")
+                }
             }
         }
-        
+    }
+    
+    static func setVideoFavourite(id: NSManagedObjectID) {
+            let videoData = managedContext.object(with: id)
+            videoData.setValue(true, forKey: "isFavourite")
+        }
+    
+    static func setVideoWatched(id: NSManagedObjectID) {
+        let videoData = managedContext.object(with: id)
+        videoData.setValue(true, forKey: "isWatched")
     }
 }

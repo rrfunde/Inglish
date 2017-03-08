@@ -8,20 +8,17 @@
 
 import UIKit
 import MobilePlayer
+import NVActivityIndicatorView
 
-enum videoType: Int16 {
-    case All = 0
-    case Favourite
-    case Watched
-}
 class AllVideosController: UITableViewController {
 
 //  MARK: Members
     var allVideos = [VideoDetail]()
     var favouriteVideos = [VideoDetail]()
     var watchedVideos = [VideoDetail]()
-    var filterVideoBy = videoType.All.rawValue
     var videos = [VideoDetail]()
+    var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
+    
 //  MARK: Actions
     @IBAction func videoFilterChanged(_ sender: Any) {
         if let segmentControl = sender as? UISegmentedControl {
@@ -30,8 +27,14 @@ class AllVideosController: UITableViewController {
             case 0:
                 videos = allVideos
             case 1:
+                self.favouriteVideos = allVideos.filter {
+                    ($0 as VideoDetail).isFavourite == true
+                }
                 videos = favouriteVideos
             case 2:
+                self.watchedVideos = allVideos.filter {
+                    ($0 as VideoDetail).isWatched == true
+                }
                 videos = watchedVideos
             default:
                 ()
@@ -43,34 +46,19 @@ class AllVideosController: UITableViewController {
 //  MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
+        
         if !(UserDefaults.standard.string(forKey: "firstOpen") != nil) {
-        VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
-            if let videosData = VideoDataController.retriveVideos() {
-                UserDefaults.standard.set(true, forKey: "firstOpen")
-                self.allVideos = videosData
-                self.favouriteVideos = videosData.filter {
-                    ($0 as VideoDetail).type == videoType.Favourite.rawValue
+            VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
+                self.categarizedVideos() {
                 }
-                self.watchedVideos = videosData.filter {
-                    ($0 as VideoDetail).type == videoType.Watched.rawValue
-                }
-                self.videos = self.allVideos
-                
-                self.doTableRefresh()
+            })
+        } else {
+            categarizedVideos() {
             }
-        })
-        } else if let videosData = VideoDataController.retriveVideos() {
-                allVideos = videosData
-                self.favouriteVideos = videosData.filter {
-                ($0 as VideoDetail).type == videoType.Favourite.rawValue
             }
-                self.watchedVideos = videosData.filter {
-                ($0 as VideoDetail).type == videoType.Watched.rawValue
-            }
-            self.videos = allVideos
-                self.doTableRefresh()
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,21 +106,27 @@ class AllVideosController: UITableViewController {
         
         let favourite = UITableViewRowAction(style:.normal,title: "Favourite"){
              action, index in
-             self.videos[index.row].type = 1
-             VideoDataController.storeVideos(videos: [self.videos[index.row]])
+             let id = self.videos[index.row].managedObjectID
+            self.allVideos.filter({ $0.managedObjectID == id}).first?.isFavourite = true
+             VideoDataController.setVideoFavourite(id: id)
+             self.tableView.setEditing(false, animated: true)
         }
         favourite.backgroundColor = UIColor.green
         
         let delete = UITableViewRowAction(style: .normal,title: "Delete"){
             action, index in
             print("favorite button tapped")
+            self.tableView.setEditing(false, animated: true)
         }
         delete.backgroundColor = UIColor.red
 
         let watched = UITableViewRowAction(style: .normal,title: "Watched"){
             action, index in
-            self.videos[index.row].type = 1
-            VideoDataController.storeVideos(videos: [self.videos[index.row]])
+            let id = self.videos[index.row].managedObjectID
+            self.allVideos.filter({$0.managedObjectID == id}).first?.isWatched = true
+            VideoDataController.setVideoWatched(id: id)
+            
+            self.tableView.setEditing(false, animated: true)
         }
         watched.backgroundColor = UIColor.gray
 
@@ -143,8 +137,24 @@ class AllVideosController: UITableViewController {
     {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.indicator.stopAnimating()
             return
         }
     }
-
+    
+    func categarizedVideos(completion: () -> ()) {
+        if let videosData = VideoDataController.retriveVideos() {
+            VideoDataManager.logger.debug("retrived video data from local database")
+            allVideos = videosData
+            self.favouriteVideos = videosData.filter {
+                ($0 as VideoDetail).isFavourite == true
+            }
+            self.watchedVideos = videosData.filter {
+                ($0 as VideoDetail).isWatched == true
+            }
+            self.videos = allVideos
+            self.doTableRefresh()
+            completion()
+        }
+    }
 }

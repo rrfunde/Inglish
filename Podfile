@@ -7,5 +7,6 @@ target 'English Simplified' do
   pod 'MobilePlayer'
   pod 'Alamofire', '~> 4.3'
   pod 'XCGLogger'
+  pod 'NVActivityIndicatorView'
 end
 

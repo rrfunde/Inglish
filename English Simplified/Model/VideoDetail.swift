@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class VideoDetail {
     
@@ -15,17 +16,21 @@ class VideoDetail {
     var title: String
     var imageUrl: String
     var duration: String
-    var type: Int16
+    var isWatched: Bool
+    var isFavourite: Bool
+    var managedObjectID: NSManagedObjectID
     
 //    MARK: Attributes
-    init(id: String, title: String, imageUrl: String, duration: String, type: Int16 = videoType.All.rawValue) {
+    init(id: String, title: String, imageUrl: String, duration: String, isWatched: Bool = false, isFavourite: Bool = false, managedObjectID: NSManagedObjectID = NSManagedObjectID()) {
         var seconds: String
         var minutes: String
         
         self.id = id
         self.title = title
         self.imageUrl = imageUrl
-        self.type = type
+        self.isWatched = isWatched
+        self.isFavourite = isFavourite
+        self.managedObjectID = managedObjectID
         
         var time = duration.characters.split(separator: ":").map(String.init)
         seconds = time[1].characters.count > 1 ? time[1] : "0" + time[1]
