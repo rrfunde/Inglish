@@ -55,6 +55,7 @@ class AllVideosController: UITableViewController {
             VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
                 self.categarizedVideos() {
                 }
+                UserDefaults.standard.set(true, forKey: "firstOpen")
             })
         } else {
             categarizedVideos() {
