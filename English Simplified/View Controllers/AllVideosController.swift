@@ -45,8 +45,9 @@ class AllVideosController: UITableViewController {
     
 //  MARK: Life cycle
     override func viewDidLoad() {
+        tableView.tableFooterView = UIView()
         super.viewDidLoad()
-        indicator.center = self.view.center
+        indicator.center = self.tableView.center
         self.view.addSubview(indicator)
         indicator.startAnimating()
         
