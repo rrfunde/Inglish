@@ -11,7 +11,10 @@ import MobilePlayer
 import NVActivityIndicatorView
 import CWStatusBarNotification
 
-class AllVideosController: UITableViewController {
+/**
+ The purpose of the `VideosController` is to show english learning videos and allows them to set them favourite, Watched and user can delete the videos
+ */
+class VideosController: UITableViewController {
 
 //  MARK: Members
     var allVideos = [VideoDetail]()
@@ -54,16 +57,14 @@ class AllVideosController: UITableViewController {
         self.view.addSubview(indicator)
         indicator.startAnimating()
         
-        if !(UserDefaults.standard.string(forKey: "firstOpen") != nil) {
+        if (UserDefaults.standard.string(forKey: "firstOpen") == nil) {
             VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
-                self.categarizedVideos() {
-                }
+                self.categarizedVideos()
                 UserDefaults.standard.set(true, forKey: "firstOpen")
             })
         } else {
-            categarizedVideos() {
-            }
-            }
+            categarizedVideos()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,7 +88,6 @@ class AllVideosController: UITableViewController {
         let videoImageUrl = videos[indexPath.row].imageUrl
 
         let videoDuration = videos[indexPath.row].duration
-//        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
         cell.videoImage.downloadAndSetImage(link: videoImageUrl)
         cell.videoDuration.text = videoDuration
         
@@ -148,7 +148,7 @@ class AllVideosController: UITableViewController {
     }
     
     // this function creates 3 sets of videos ALL, Favourite and Watched and refresh table
-    func categarizedVideos(completion: () -> ()) {
+    func categarizedVideos() {
         if let videosData = VideoDataController.retriveVideos() {
             VideoDataManager.logger.debug("retrived video data from local database")
             allVideos = videosData
@@ -160,15 +160,15 @@ class AllVideosController: UITableViewController {
             }
             self.videos = allVideos
             self.doTableRefresh()
-            completion()
         }
     }
     
     func configureBannerView() {
         self.bannerHandler.notificationLabelBackgroundColor = UIColor.green
         self.bannerHandler.notificationLabelTextColor = UIColor.black
+        self.bannerHandler.notificationAnimationInStyle = .top
+
 //        self.bannerHandler.notificationLabelFont = UIFont(name: self.bannerHandler.notificationLabelFont.familyName, size: 20)
 //        self.bannerHandler.notificationStyle = .navigationBarNotification
-        self.bannerHandler.notificationAnimationInStyle = .top
     }
 }
