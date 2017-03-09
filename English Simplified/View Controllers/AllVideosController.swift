@@ -9,6 +9,7 @@
 import UIKit
 import MobilePlayer
 import NVActivityIndicatorView
+import CWStatusBarNotification
 
 class AllVideosController: UITableViewController {
 
@@ -18,6 +19,7 @@ class AllVideosController: UITableViewController {
     var watchedVideos = [VideoDetail]()
     var videos = [VideoDetail]()
     var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
+    var bannerHandler = CWStatusBarNotification()
     
 //  MARK: Actions
     @IBAction func videoFilterChanged(_ sender: Any) {
@@ -45,8 +47,9 @@ class AllVideosController: UITableViewController {
     
 //  MARK: Life cycle
     override func viewDidLoad() {
-        tableView.tableFooterView = UIView()
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        configureBannerView()
         indicator.center = self.tableView.center
         self.view.addSubview(indicator)
         indicator.startAnimating()
@@ -111,13 +114,13 @@ class AllVideosController: UITableViewController {
              let id = self.videos[index.row].managedObjectID
             self.allVideos.filter({ $0.managedObjectID == id}).first?.isFavourite = true
              VideoDataController.setVideoFavourite(id: id)
+            self.bannerHandler.display(with: NSAttributedString(string: "added to favourite"), forDuration: 1)
              self.tableView.setEditing(false, animated: true)
         }
         favourite.backgroundColor = UIColor.green
         
         let delete = UITableViewRowAction(style: .normal,title: "Delete"){
             action, index in
-            print("favorite button tapped")
             self.tableView.setEditing(false, animated: true)
         }
         delete.backgroundColor = UIColor.red
@@ -127,7 +130,7 @@ class AllVideosController: UITableViewController {
             let id = self.videos[index.row].managedObjectID
             self.allVideos.filter({$0.managedObjectID == id}).first?.isWatched = true
             VideoDataController.setVideoWatched(id: id)
-            
+            self.bannerHandler.display(with: NSAttributedString(string: "added to Watched"), forDuration: 1)
             self.tableView.setEditing(false, animated: true)
         }
         watched.backgroundColor = UIColor.gray
@@ -144,6 +147,7 @@ class AllVideosController: UITableViewController {
         }
     }
     
+    // this function creates 3 sets of videos ALL, Favourite and Watched and refresh table
     func categarizedVideos(completion: () -> ()) {
         if let videosData = VideoDataController.retriveVideos() {
             VideoDataManager.logger.debug("retrived video data from local database")
@@ -158,5 +162,13 @@ class AllVideosController: UITableViewController {
             self.doTableRefresh()
             completion()
         }
+    }
+    
+    func configureBannerView() {
+        self.bannerHandler.notificationLabelBackgroundColor = UIColor.green
+        self.bannerHandler.notificationLabelTextColor = UIColor.black
+//        self.bannerHandler.notificationLabelFont = UIFont(name: self.bannerHandler.notificationLabelFont.familyName, size: 20)
+//        self.bannerHandler.notificationStyle = .navigationBarNotification
+        self.bannerHandler.notificationAnimationInStyle = .top
     }
 }
