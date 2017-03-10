@@ -9,9 +9,8 @@
 import Foundation
 import Alamofire
 
-class VideoDataManager {
-    
-    static var videoDetails = [VideoDetail]()                                                   // Store video Details
+class VideoApiManager {
+
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let logger = appDelegate.logger
     static let utilityQueue = DispatchQueue.global(qos: .utility)
@@ -34,17 +33,15 @@ class VideoDataManager {
                     if let videoJSON = response.result.value {
                         if let videoData = videoJSON as? [[String: String]] {
                         //                    var lastVideo = 0
+                            
                             for video in videoData {
                                 let videoId = video["videoId"]! as String
                                 let title = video["title"]! as String
                                 let imageUrl = video["imageUrl"]! as String
-                                let durationString = video["duration"]! as String                           // duration is in the format of 00M11 where 00 -> seconds and 11 -> minutes
-                                let duration = durationString.replacingOccurrences(of: "M", with: ":")
-                                let videoDetail = VideoDetail(id: videoId, title: title, imageUrl: imageUrl, duration: duration)
-                                videoDetails.append(videoDetail)
-                            }
-                            DispatchQueue.main.async {
-                                VideoDataController.storeVideos(videos: videoDetails)
+                                let duration = video["duration"]! as String                           // duration is in the format of 00M11 where 00 -> seconds and 11 -> minutes
+                                appDelegate.dataController.storeVideo(videoId: videoId, title: title, imageUrl: imageUrl, duration: duration)
+//                                let videoDetail = VideoDetail(videoId: videoId, title: title, imageUrl: imageUrl, duration: duration)
+//                                videoDetails.append(videoDetail)
                             }
                         }
                     }

@@ -8,6 +8,9 @@ xcodeproj "English Simplified"
 
 target 'English Simplified' do
   pod 'Alamofire', '~> 4.3'
+  pod 'XCGLogger'
+  pod 'NVActivityIndicatorView'
+  pod 'CWStatusBarNotification', '~> 2.3.5'
   pod 'YouTubeFloatingPlayer'
 
 end

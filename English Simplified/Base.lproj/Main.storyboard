@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="12p-u5-4q9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oDH-GC-gbN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="246" y="1014"/>
         </scene>
-        <!--Favourite-->
+        <!--View Controller-->
         <scene sceneID="ukv-AS-Psl">
             <objects>
                 <viewController id="75e-IK-o36" sceneMemberID="viewController">
@@ -42,21 +42,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourite" image="tab_favourite" id="1f4-i2-EUk"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="1f4-i2-EUk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qql-Rd-gbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="247" y="328"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="mhl-0z-DRG">
             <objects>
-                <tabBarController id="oDH-GC-gbN" sceneMemberID="viewController">
+                <tabBarController id="oDH-GC-gbN" customClass="BaseTabBarController" customModule="English_Simplified" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4zv-td-nvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="9Ke-TW-H9R" kind="relationship" relationship="viewControllers" id="3fB-a1-ciz"/>
                         <segue destination="gG2-jl-LGY" kind="relationship" relationship="viewControllers" id="sgj-Mo-0da"/>
@@ -80,14 +85,14 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLV-3M-62I" id="Qx9-hl-cT1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_favourite" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-0B-K0h">
-                                            <rect key="frame" x="10" y="10" width="355" height="187"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network error" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-0B-K0h">
+                                            <rect key="frame" x="10" y="4" width="355" height="199.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Ur-TnY">
-                                            <rect key="frame" x="323" y="179" width="42" height="18"/>
+                                            <rect key="frame" x="323" y="185.5" width="42" height="18"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,8 +100,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="yO0-0B-K0h" secondAttribute="bottom" constant="10" id="8sg-Hs-5sb"/>
-                                        <constraint firstItem="yO0-0B-K0h" firstAttribute="top" secondItem="Qx9-hl-cT1" secondAttribute="top" constant="10" id="VaI-5S-CRl"/>
+                                        <constraint firstAttribute="bottom" secondItem="yO0-0B-K0h" secondAttribute="bottom" constant="4" id="8sg-Hs-5sb"/>
+                                        <constraint firstItem="yO0-0B-K0h" firstAttribute="top" secondItem="Qx9-hl-cT1" secondAttribute="top" constant="4" id="VaI-5S-CRl"/>
                                         <constraint firstAttribute="trailing" secondItem="yO0-0B-K0h" secondAttribute="trailing" constant="10" id="cRH-4S-DtE"/>
                                         <constraint firstItem="Nce-Ur-TnY" firstAttribute="bottom" secondItem="yO0-0B-K0h" secondAttribute="bottom" id="do3-1W-2lh"/>
                                         <constraint firstItem="yO0-0B-K0h" firstAttribute="leading" secondItem="Qx9-hl-cT1" secondAttribute="leading" constant="10" id="m3j-6g-dG8"/>
@@ -115,17 +120,31 @@
                             <outlet property="delegate" destination="12p-u5-4q9" id="U87-H4-qFy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0d4-5v-6Qc"/>
+                    <navigationItem key="navigationItem" id="0d4-5v-6Qc">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="poe-qK-gxe">
+                            <rect key="frame" x="81.5" y="7" width="212" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Favourite"/>
+                                <segment title="Watched"/>
+                            </segments>
+                            <connections>
+                                <action selector="videoFilterChanged:" destination="12p-u5-4q9" eventType="valueChanged" id="VXX-hm-484"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tb4-Bf-9go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.4000000000001" y="-329.68515742128938"/>
         </scene>
-        <!--All-->
+        <!--Videos-->
         <scene sceneID="DIr-0Q-Usr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ke-TW-H9R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All" image="tab_home" id="uUy-xO-TXb"/>
+                    <tabBarItem key="tabBarItem" title="Videos" image="tab_home" id="uUy-xO-TXb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HDl-IB-q6p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -142,7 +161,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_favourite" width="24" height="24"/>
+        <image name="Network error" width="347" height="305"/>
         <image name="tab_home" width="24" height="24"/>
     </resources>
 </document>
