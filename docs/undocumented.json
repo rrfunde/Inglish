@@ -1,0 +1,509 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 16,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.logger",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 19,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 25,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 30,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 35,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 39,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 43,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 50,
+      "symbol": "AppDelegate.persistentContainer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/AppDelegate.swift",
+      "line": 79,
+      "symbol": "AppDelegate.saveContext()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/APIConstants.swift",
+      "line": 11,
+      "symbol": "APIConstants",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/APIConstants.swift",
+      "line": 13,
+      "symbol": "APIConstants.YOUTUBE_BASE_URL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/APIConstants.swift",
+      "line": 14,
+      "symbol": "APIConstants.VIDEO_DATA_API",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/ErrorCodes.swift",
+      "line": 11,
+      "symbol": "ErrorCodes",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/ErrorCodes.swift",
+      "line": 12,
+      "symbol": "ErrorCodes.TIMEOUT_ERROR",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/GeneralConstants.swift",
+      "line": 11,
+      "symbol": "GeneralConstants",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/GeneralConstants.swift",
+      "line": 12,
+      "symbol": "GeneralConstants.Storyboard",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/GeneralConstants.swift",
+      "line": 13,
+      "symbol": "GeneralConstants.Storyboard.ALL_VIDEOS_CONTROLLER",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/GeneralConstants.swift",
+      "line": 16,
+      "symbol": "GeneralConstants.Database",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Constant/GeneralConstants.swift",
+      "line": 17,
+      "symbol": "GeneralConstants.Database.ENTITY_NAME",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 11,
+      "symbol": "VideoCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 12,
+      "symbol": "VideoCell.videoImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 13,
+      "symbol": "VideoCell.videoTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 14,
+      "symbol": "VideoCell.videoDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 16,
+      "symbol": "VideoCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Custom Views/VideoCell.swift",
+      "line": 21,
+      "symbol": "VideoCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Extension/UIImageView.swift",
+      "line": 7,
+      "symbol": "UIImageView.downloadAndSetImage(link:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Extension/UIView.swift",
+      "line": 13,
+      "symbol": "UIView.addShadowEffect()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 13,
+      "symbol": "VideoDataController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 16,
+      "symbol": "VideoDataController.appDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 17,
+      "symbol": "VideoDataController.managedContext",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 19,
+      "symbol": "VideoDataController.retriveVideos()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 45,
+      "symbol": "VideoDataController.storeVideos(videos:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 67,
+      "symbol": "VideoDataController.setVideoFavourite(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDataController.swift",
+      "line": 72,
+      "symbol": "VideoDataController.setVideoWatched(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 12,
+      "symbol": "VideoDetail",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 15,
+      "symbol": "VideoDetail.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 16,
+      "symbol": "VideoDetail.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 17,
+      "symbol": "VideoDetail.imageUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 18,
+      "symbol": "VideoDetail.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 19,
+      "symbol": "VideoDetail.isWatched",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 20,
+      "symbol": "VideoDetail.isFavourite",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 21,
+      "symbol": "VideoDetail.managedObjectID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/Model/VideoDetail.swift",
+      "line": 24,
+      "symbol": "VideoDetail.init(id:title:imageUrl:duration:isWatched:isFavourite:managedObjectID:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 24,
+      "symbol": "AllVideosController.allVideos",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 25,
+      "symbol": "AllVideosController.favouriteVideos",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 26,
+      "symbol": "AllVideosController.watchedVideos",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 27,
+      "symbol": "AllVideosController.videos",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 28,
+      "symbol": "AllVideosController.indicator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 29,
+      "symbol": "AllVideosController.bannerHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 32,
+      "symbol": "AllVideosController.videoFilterChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 56,
+      "symbol": "AllVideosController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 76,
+      "symbol": "AllVideosController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 82,
+      "symbol": "AllVideosController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 86,
+      "symbol": "AllVideosController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 91,
+      "symbol": "AllVideosController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 105,
+      "symbol": "AllVideosController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 117,
+      "symbol": "AllVideosController.tableView(_:editActionsForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 148,
+      "symbol": "AllVideosController.doTableRefresh()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 158,
+      "symbol": "AllVideosController.categarizedVideos(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/AllVideosController.swift",
+      "line": 174,
+      "symbol": "AllVideosController.configureBannerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/BaseTabBarController.swift",
+      "line": 11,
+      "symbol": "BaseTabBarController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/BaseTabBarController.swift",
+      "line": 13,
+      "symbol": "BaseTabBarController.defaultIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/BaseTabBarController.swift",
+      "line": 15,
+      "symbol": "BaseTabBarController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/View Controllers/BaseTabBarController.swift",
+      "line": 22,
+      "symbol": "BaseTabBarController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 12,
+      "symbol": "VideoDataManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 14,
+      "symbol": "VideoDataManager.videoDetails",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 15,
+      "symbol": "VideoDataManager.appDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 16,
+      "symbol": "VideoDataManager.logger",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 17,
+      "symbol": "VideoDataManager.utilityQueue",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]/English Simplified/api/VideoDataManager.swift",
+      "line": 18,
+      "symbol": "VideoDataManager.AlamofireManager",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/rohit.funde/Desktop/iOS/Apps/English Simplified[develop]"
+}
