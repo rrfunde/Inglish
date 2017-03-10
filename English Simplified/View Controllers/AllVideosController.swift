@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import MobilePlayer
+import YouTubeFloatingPlayer
 
 class AllVideosController: UITableViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         VideoDataManager.getDataFromServer(from: 0, to: 20,completion: {
             self.doTableRefresh()
         })
@@ -41,7 +40,7 @@ class AllVideosController: UITableViewController {
         let videoImageUrl = VideoDataManager.videoDetails[indexPath.row].imageUrl
 
         let videoDuration = VideoDataManager.videoDetails[indexPath.row].duration
-//        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
+        cell.videoTitle.text = VideoDataManager.videoDetails[indexPath.row].title
         cell.videoImage.downloadAndSetImage(link: videoImageUrl)
         cell.videoDuration.text = videoDuration
         return cell
@@ -49,13 +48,10 @@ class AllVideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = APIConstants.YOUTUBE_BASE_URL + VideoDataManager.videoDetails[indexPath.row].videoId
-        let videoTitle = VideoDataManager.videoDetails[indexPath.row].title
-        let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
-        playerVC.title = videoTitle
-        playerVC.activityItems = [videoUrl] 
+        let videoID = VideoDataManager.videoDetails[indexPath.row].videoId
         
-        present(playerVC, animated: true, completion: {})
+        YTFPlayer.initYTF(videoID: videoID)
+        YTFPlayer.showYTFView(viewController: self)
     }
     
     

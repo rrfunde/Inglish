@@ -1,20 +1,18 @@
 PODS:
   - Alamofire (4.3.0)
   - MobilePlayer (1.2.0)
-  - XCGLogger (4.0.0):
-    - XCGLogger/Core (= 4.0.0)
-  - XCGLogger/Core (4.0.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - MobilePlayer
-  - XCGLogger
+  - youtube-ios-player-helper (~> 0.1.6)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   MobilePlayer: 069b13482499f14c25b6ce53f63a91e17975b073
-  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 915bf660379fb881f293c02ce011b121784c6b2f
+PODFILE CHECKSUM: b903bcdcc8accb5ac8d20737d58ce13f18bb9b87
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
