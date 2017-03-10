@@ -18,9 +18,12 @@
 		5B4E00AB1E34FF6F006195B3 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E00AA1E34FF6F006195B3 /* UIImageView.swift */; };
 		5BA3278D1E22865D00208CA6 /* AllVideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278C1E22865D00208CA6 /* AllVideosController.swift */; };
 		5BA327901E23A75F00208CA6 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3278F1E23A75F00208CA6 /* VideoCell.swift */; };
+		97BAC44464D154128138C333 /* Pods_English_Simplified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5EFDD1C8A448B9CCBD5B1D /* Pods_English_Simplified.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5EFDD1C8A448B9CCBD5B1D /* Pods_English_Simplified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_English_Simplified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3077DDE0256EABA519D61B /* Pods-English Simplified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.debug.xcconfig"; sourceTree = "<group>"; };
 		51D6D0FD1E56E6C1005F3C27 /* English_Simplified-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "English_Simplified-Bridging-Header.h"; path = "Support Files/English_Simplified-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B4ABA7A1E227F620091F15F /* English Simplified.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "English Simplified.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4ABA7D1E227F620091F15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		5B4E00AA1E34FF6F006195B3 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extension/UIImageView.swift; sourceTree = "<group>"; };
 		5BA3278C1E22865D00208CA6 /* AllVideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllVideosController.swift; path = "View Controllers/AllVideosController.swift"; sourceTree = "<group>"; };
 		5BA3278F1E23A75F00208CA6 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "Custom Views/VideoCell.swift"; sourceTree = "<group>"; };
+		D025EF838A714FB72766F348 /* Pods-English Simplified.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.release.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BAC44464D154128138C333 /* Pods_English_Simplified.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,8 @@
 			children = (
 				5B4ABA7C1E227F620091F15F /* English Simplified */,
 				5B4ABA7B1E227F620091F15F /* Products */,
+				FCDC71D90ED2F4CD5C56A3D0 /* Pods */,
+				72DBC356A3F10332D2434229 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			name = "Custom Views";
 			sourceTree = "<group>";
 		};
+		72DBC356A3F10332D2434229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EFDD1C8A448B9CCBD5B1D /* Pods_English_Simplified.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCDC71D90ED2F4CD5C56A3D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D3077DDE0256EABA519D61B /* Pods-English Simplified.debug.xcconfig */,
+				D025EF838A714FB72766F348 /* Pods-English Simplified.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B4ABA8C1E227F620091F15F /* Build configuration list for PBXNativeTarget "English Simplified" */;
 			buildPhases = (
+				B4B5B47D513EE20B0ECC100B /* [CP] Check Pods Manifest.lock */,
 				5B4ABA761E227F620091F15F /* Sources */,
 				5B4ABA771E227F620091F15F /* Frameworks */,
 				5B4ABA781E227F620091F15F /* Resources */,
+				E83B776ECB9F9CDF3A128769 /* [CP] Embed Pods Frameworks */,
+				A0C7C2CB65A4902DC3F7F941 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +234,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0C7C2CB65A4902DC3F7F941 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B5B47D513EE20B0ECC100B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E83B776ECB9F9CDF3A128769 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B4ABA761E227F620091F15F /* Sources */ = {
@@ -341,6 +416,7 @@
 		};
 		5B4ABA8D1E227F620091F15F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3077DDE0256EABA519D61B /* Pods-English Simplified.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 87CT3T3CK2;
@@ -355,6 +431,7 @@
 		};
 		5B4ABA8E1E227F620091F15F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D025EF838A714FB72766F348 /* Pods-English Simplified.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 87CT3T3CK2;

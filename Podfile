@@ -1,6 +1,5 @@
 # Master Cocoapods repository
 source "https://github.com/CocoaPods/Specs.git"
-source "https://github.com/advaita13/YouTubeFloatingPlayerPodSpecs"
 
 use_frameworks!
 
