@@ -109,4 +109,6 @@ fastlane/test_output
 *.xccheckout
 *.xcscmblueprint
 
+#Pod files
+pods/
 # End of https://www.gitignore.io/api/mac,macos,swift,xcode
