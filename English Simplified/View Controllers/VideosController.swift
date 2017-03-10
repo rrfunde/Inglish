@@ -16,14 +16,16 @@ import CWStatusBarNotification
  */
 class VideosController: UITableViewController {
 
-//  MARK: Members
+//  MARK: public Members
     var allVideos = [VideoDetail]()
     var favouriteVideos = [VideoDetail]()
     var watchedVideos = [VideoDetail]()
-    var videos = [VideoDetail]()
-    var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
-    var bannerHandler = CWStatusBarNotification()
-    
+  
+//  MARK: private Members
+    private var videos = [VideoDetail]()
+    private var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
+    private var bannerHandler = CWStatusBarNotification()
+
 //  MARK: Actions
     @IBAction func videoFilterChanged(_ sender: Any) {
         if let segmentControl = sender as? UISegmentedControl {
