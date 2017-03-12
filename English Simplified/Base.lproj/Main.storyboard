@@ -75,7 +75,7 @@
         <!--Videos-->
         <scene sceneID="CnW-Oz-I5K">
             <objects>
-                <tableViewController storyboardIdentifier="AllVideosController" title="Videos" id="12p-u5-4q9" customClass="AllVideosController" customModule="English_Simplified" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AllVideosController" title="Videos" id="12p-u5-4q9" customClass="VideosController" customModule="English_Simplified" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="208" sectionHeaderHeight="28" sectionFooterHeight="28" id="fiA-OF-d11">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLV-3M-62I" id="Qx9-hl-cT1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network error" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-0B-K0h">
@@ -123,7 +123,7 @@
                     <navigationItem key="navigationItem" id="0d4-5v-6Qc">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="poe-qK-gxe">
-                            <rect key="frame" x="81.5" y="7" width="212" height="30"/>
+                            <rect key="frame" x="82" y="7" width="212" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All"/>

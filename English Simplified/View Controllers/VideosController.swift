@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import MobilePlayer
 import NVActivityIndicatorView
 import CWStatusBarNotification
+import YouTubeFloatingPlayer
 
 /**
  The purpose of the `VideosController` is to show english learning videos and allows them to set them favourite, Watched and user can delete the videos
@@ -100,12 +100,8 @@ class VideosController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].id
-        let videoTitle = videos[indexPath.row].title
-        let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
-        playerVC.title = videoTitle
-        playerVC.activityItems = [videoUrl] 
-        
-        present(playerVC, animated: true, completion: {})
+//        YTFPlayer.initYTF(with: tableView, tableCellNibName: UITableViewCell.self, tableCellReuseIdentifier: "videoCell", videoID: videoUrl)
+        YTFPlayer.showYTFView(viewController: self)
     }
     
     
