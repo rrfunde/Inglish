@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,40 +79,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="208" id="PLV-3M-62I" customClass="VideoCell" customModule="English_Simplified" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="208"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLV-3M-62I" id="Qx9-hl-cT1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network error" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-0B-K0h">
-                                            <rect key="frame" x="10" y="4" width="355" height="199.5"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Ur-TnY">
-                                            <rect key="frame" x="323" y="185.5" width="42" height="18"/>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="yO0-0B-K0h" secondAttribute="bottom" constant="4" id="8sg-Hs-5sb"/>
-                                        <constraint firstItem="yO0-0B-K0h" firstAttribute="top" secondItem="Qx9-hl-cT1" secondAttribute="top" constant="4" id="VaI-5S-CRl"/>
-                                        <constraint firstAttribute="trailing" secondItem="yO0-0B-K0h" secondAttribute="trailing" constant="10" id="cRH-4S-DtE"/>
-                                        <constraint firstItem="Nce-Ur-TnY" firstAttribute="bottom" secondItem="yO0-0B-K0h" secondAttribute="bottom" id="do3-1W-2lh"/>
-                                        <constraint firstItem="yO0-0B-K0h" firstAttribute="leading" secondItem="Qx9-hl-cT1" secondAttribute="leading" constant="10" id="m3j-6g-dG8"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Nce-Ur-TnY" secondAttribute="trailing" constant="2.5" id="xW1-3Z-Ax7"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="videoDuration" destination="Nce-Ur-TnY" id="OCr-Dz-72X"/>
-                                    <outlet property="videoImage" destination="yO0-0B-K0h" id="paq-Rg-kyF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="12p-u5-4q9" id="t6L-ep-FWk"/>
@@ -161,7 +126,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Network error" width="347" height="305"/>
         <image name="tab_home" width="24" height="24"/>
     </resources>
 </document>
