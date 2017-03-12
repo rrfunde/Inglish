@@ -15,18 +15,28 @@ import YouTubeFloatingPlayer
  The purpose of the `VideosController` is to show english learning videos and allows them to set them favourite, Watched and user can delete the videos
  */
 class VideosController: UITableViewController {
+    
+    // MARK: Constants
+    
+    class Constants {
+    
+        static let HEIGHT_FOR_VIDEO_CELL = CGFloat(208)
+    }
 
-//  MARK: public Members
+    //  MARK: public Members
+    
     var allVideos = [VideoDetail]()
     var favouriteVideos = [VideoDetail]()
     var watchedVideos = [VideoDetail]()
   
-//  MARK: private Members
+    //  MARK: private Members
+    
     private var videos = [VideoDetail]()
     private var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
     private var bannerHandler = CWStatusBarNotification()
 
-//  MARK: Actions
+    //  MARK: Actions
+    
     @IBAction func videoFilterChanged(_ sender: Any) {
         if let segmentControl = sender as? UISegmentedControl {
             let index = segmentControl.selectedSegmentIndex
@@ -50,9 +60,13 @@ class VideosController: UITableViewController {
         }
     }
     
-//  MARK: Life cycle
+    //  MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "VideoCell", bundle: Bundle.main), forCellReuseIdentifier: "videoCell")
+        
         tableView.tableFooterView = UIView()
         configureBannerView()
         indicator.center = self.tableView.center
@@ -72,8 +86,14 @@ class VideosController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Constants.HEIGHT_FOR_VIDEO_CELL
+    }
 
-    // MARK: - Table view data source
+    // MARK: - TableView Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -99,8 +119,7 @@ class VideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].id
-//        YTFPlayer.initYTF(with: tableView, tableCellNibName: UITableViewCell.self, tableCellReuseIdentifier: "videoCell", videoID: videoUrl)
+        YTFPlayer.initYTF(with: tableView, tableCellNibName: "VideoCell", tableCellReuseIdentifier: "videoCell", videoID: videos[indexPath.row].id)
         YTFPlayer.showYTFView(viewController: self)
     }
     

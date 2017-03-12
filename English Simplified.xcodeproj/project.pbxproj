@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		332792780CC50E708103C740 /* Pods_English_Simplified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */; };
+		512374C31E74FE5C00DAA29F /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512374C21E74FE5C00DAA29F /* VideoCell.xib */; };
 		5B22A0811E61577000D67F92 /* VideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B22A07F1E61577000D67F92 /* VideoModel.xcdatamodeld */; };
 		5B22A0831E6158BA00D67F92 /* VideoDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22A0821E6158BA00D67F92 /* VideoDataController.swift */; };
 		5B4ABA7E1E227F620091F15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ABA7D1E227F620091F15F /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		27E52C468302DA2AA8E0BDE1 /* Pods-English Simplified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English Simplified.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English Simplified/Pods-English Simplified.debug.xcconfig"; sourceTree = "<group>"; };
 		3FD083B0139E275EBC8A4BAD /* Pods_English_Simplified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_English_Simplified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		512374C21E74FE5C00DAA29F /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoCell.xib; path = "Custom Views/VideoCell.xib"; sourceTree = "<group>"; };
 		5B22A0801E61577000D67F92 /* VideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoModel.xcdatamodel; sourceTree = "<group>"; };
 		5B22A0821E6158BA00D67F92 /* VideoDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDataController.swift; path = Model/VideoDataController.swift; sourceTree = "<group>"; };
 		5B4ABA7A1E227F620091F15F /* English Simplified.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "English Simplified.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 		5BA3278E1E23A73800208CA6 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				512374C21E74FE5C00DAA29F /* VideoCell.xib */,
 				5BA3278F1E23A75F00208CA6 /* VideoCell.swift */,
 			);
 			name = "Custom Views";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4ABA881E227F620091F15F /* LaunchScreen.storyboard in Resources */,
+				512374C31E74FE5C00DAA29F /* VideoCell.xib in Resources */,
 				5B4ABA851E227F620091F15F /* Assets.xcassets in Resources */,
 				5B4ABA831E227F620091F15F /* Main.storyboard in Resources */,
 			);
