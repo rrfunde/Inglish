@@ -42,7 +42,7 @@ class VideoDataController: NSObject {
         return videos
     }
     
-    static func storeVideos(videos: [VideoDetail]) {
+    static func storeVideos(videos: [VideoDetail], completion: () -> () = {}) {
 
         if let entity = NSEntityDescription.entity(forEntityName: GeneralConstants.Database.ENTITY_NAME, in: managedContext) {
 
@@ -57,6 +57,7 @@ class VideoDataController: NSObject {
                 videoManagedObject.setValue(video.isWatched, forKey: "isWatched")
                 do {
                     try managedContext.save()
+                    completion()
                 } catch let error as NSError {
                     VideoDataManager.logger.error("Could not save. \(error), \(error.userInfo)")
                 }

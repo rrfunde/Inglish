@@ -44,7 +44,7 @@ class VideoDataManager {
                                 videoDetails.append(videoDetail)
                             }
                             DispatchQueue.main.async {
-                                VideoDataController.storeVideos(videos: videoDetails)
+                                VideoDataController.storeVideos(videos: videoDetails, completion: completion)
                             }
                         }
                     }
@@ -55,9 +55,6 @@ class VideoDataManager {
                         logger.error(error)
                     }
                 }
-            defer {
-                completion()
-            }
         }
     }
 }
