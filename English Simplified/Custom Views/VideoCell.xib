@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="208" id="Zge-Cg-xQX" customClass="VideoCell" customModule="English_Simplified" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zge-Cg-xQX" id="7ci-F7-yOn">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network error" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-zO-QA3">
+                        <rect key="frame" x="10" y="4" width="355" height="199.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="NqM-FK-Ff1">
+                        <rect key="frame" x="323" y="185.5" width="42" height="18"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NqM-FK-Ff1" firstAttribute="bottom" secondItem="c2g-zO-QA3" secondAttribute="bottom" id="5ue-V6-O4K"/>
+                    <constraint firstAttribute="bottom" secondItem="c2g-zO-QA3" secondAttribute="bottom" constant="4" id="Fer-Ev-o32"/>
+                    <constraint firstAttribute="trailing" secondItem="c2g-zO-QA3" secondAttribute="trailing" constant="10" id="SsV-sc-Ipi"/>
+                    <constraint firstItem="c2g-zO-QA3" firstAttribute="leading" secondItem="7ci-F7-yOn" secondAttribute="leading" constant="10" id="TD5-Yb-QMd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NqM-FK-Ff1" secondAttribute="trailing" constant="2.5" id="fcX-MT-d8u"/>
+                    <constraint firstItem="c2g-zO-QA3" firstAttribute="top" secondItem="7ci-F7-yOn" secondAttribute="top" constant="4" id="yiP-cN-oHY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="videoDuration" destination="NqM-FK-Ff1" id="aPV-pi-f5R"/>
+                <outlet property="videoImage" destination="c2g-zO-QA3" id="0Zs-We-43y"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Network error" width="347" height="305"/>
+    </resources>
+</document>

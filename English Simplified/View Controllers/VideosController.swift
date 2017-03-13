@@ -7,26 +7,37 @@
 //
 
 import UIKit
-import MobilePlayer
 import NVActivityIndicatorView
 import CWStatusBarNotification
+import YouTubeFloatingPlayer
+import SDWebImage
 
 /**
  The purpose of the `VideosController` is to show english learning videos and allows them to set them favourite, Watched and user can delete the videos
  */
 class VideosController: UITableViewController {
+    
+    // MARK: Constants
+    
+    class Constants {
+    
+        static let HEIGHT_FOR_VIDEO_CELL = CGFloat(208)
+    }
 
-//  MARK: public Members
+    //  MARK: public Members
+    
     var allVideos = [VideoDetail]()
     var favouriteVideos = [VideoDetail]()
     var watchedVideos = [VideoDetail]()
   
-//  MARK: private Members
+    //  MARK: private Members
+    
     private var videos = [VideoDetail]()
     private var indicator = NVActivityIndicatorView(frame: CGRect(x: 0,y: 0,width: 40,height: 40), type: NVActivityIndicatorType.lineScale, color: UIColor.blue, padding: 0)
     private var bannerHandler = CWStatusBarNotification()
 
-//  MARK: Actions
+    //  MARK: Actions
+    
     @IBAction func videoFilterChanged(_ sender: Any) {
         if let segmentControl = sender as? UISegmentedControl {
             let index = segmentControl.selectedSegmentIndex
@@ -50,9 +61,13 @@ class VideosController: UITableViewController {
         }
     }
     
-//  MARK: Life cycle
+    //  MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "VideoCell", bundle: Bundle.main), forCellReuseIdentifier: "videoCell")
+        
         tableView.tableFooterView = UIView()
         configureBannerView()
         indicator.center = self.tableView.center
@@ -72,8 +87,14 @@ class VideosController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Constants.HEIGHT_FOR_VIDEO_CELL
+    }
 
-    // MARK: - Table view data source
+    // MARK: - TableView Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -90,7 +111,9 @@ class VideosController: UITableViewController {
         let videoImageUrl = videos[indexPath.row].imageUrl
 
         let videoDuration = videos[indexPath.row].duration
-        cell.videoImage.downloadAndSetImage(link: videoImageUrl)
+        cell.videoImage.sd_setShowActivityIndicatorView(true)
+        cell.videoImage.sd_setIndicatorStyle(.gray)
+        cell.videoImage.sd_setImage(with: URL(string: videoImageUrl))
         cell.videoDuration.text = videoDuration
         
 //        cell.videoImage.addShadowEffect()
@@ -99,13 +122,8 @@ class VideosController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoUrl = APIConstants.YOUTUBE_BASE_URL + videos[indexPath.row].id
-        let videoTitle = videos[indexPath.row].title
-        let playerVC = MobilePlayerViewController(contentURL: URL(string: videoUrl)!)
-        playerVC.title = videoTitle
-        playerVC.activityItems = [videoUrl] 
-        
-        present(playerVC, animated: true, completion: {})
+        YTFPlayer.initYTF(with: tableView, tableCellNibName: "VideoCell", tableCellReuseIdentifier: "videoCell", videoID: videos[indexPath.row].id)
+        YTFPlayer.showYTFView(viewController: self)
     }
     
     
@@ -124,6 +142,11 @@ class VideosController: UITableViewController {
         let delete = UITableViewRowAction(style: .normal,title: "Delete"){
             action, index in
             self.tableView.setEditing(false, animated: true)
+            let id = self.videos[index.row].managedObjectID
+            VideoDataController.deleteVideo(id: id)
+            self.categarizedVideos()
+            self.tableView.deleteRows(at: [index], with: .fade)
+            self.bannerHandler.display(with: NSAttributedString(string: "deleted"), forDuration: 1)
         }
         delete.backgroundColor = UIColor.red
 

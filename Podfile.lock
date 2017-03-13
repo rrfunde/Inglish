@@ -1,20 +1,48 @@
 PODS:
-  - Alamofire (4.3.0)
-  - MobilePlayer (1.2.0)
+  - Alamofire (4.4.0)
+  - CWStatusBarNotification (2.3.5)
+  - Firebase/Core (3.14.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.1)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.5.1):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.9)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - NVActivityIndicatorView (3.5.1)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
+  - youtube-ios-player-helper (0.1.6)
+  - YouTubeFloatingPlayer (1.0.1):
+    - youtube-ios-player-helper
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
-  - MobilePlayer
+  - CWStatusBarNotification (~> 2.3.5)
+  - Firebase/Core
+  - NVActivityIndicatorView
   - XCGLogger
+  - YouTubeFloatingPlayer
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  MobilePlayer: 069b13482499f14c25b6ce53f63a91e17975b073
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CWStatusBarNotification: 3d2738b25c3207f60cc50201388d3c96182545ff
+  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  NVActivityIndicatorView: 075563b3547445ebcff840e3297ce9dd4a23731f
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+  YouTubeFloatingPlayer: 01b7cee159496906f1d33661cd5c1b7be0e1dcdc
 
-PODFILE CHECKSUM: 915bf660379fb881f293c02ce011b121784c6b2f
+PODFILE CHECKSUM: c29504e27446859aec0c93bb9a76d267376493d2
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
