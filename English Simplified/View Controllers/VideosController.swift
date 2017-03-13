@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import CWStatusBarNotification
 import YouTubeFloatingPlayer
+import SDWebImage
 
 /**
  The purpose of the `VideosController` is to show english learning videos and allows them to set them favourite, Watched and user can delete the videos
@@ -110,7 +111,7 @@ class VideosController: UITableViewController {
         let videoImageUrl = videos[indexPath.row].imageUrl
 
         let videoDuration = videos[indexPath.row].duration
-        cell.videoImage.downloadAndSetImage(link: videoImageUrl)
+        cell.videoImage.sd_setImage(with: URL(string: videoImageUrl))
         cell.videoDuration.text = videoDuration
         
 //        cell.videoImage.addShadowEffect()

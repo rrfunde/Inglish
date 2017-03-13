@@ -12,7 +12,6 @@ target 'English Simplified' do
   pod 'NVActivityIndicatorView'
   pod 'CWStatusBarNotification', '~> 2.3.5'
   pod 'YouTubeFloatingPlayer'
-  pod 'Firebase/Core'
-
+  pod 'SDWebImage'
 end
 
