@@ -116,7 +116,6 @@ class VideosController: UITableViewController {
         cell.videoImage.sd_setImage(with: URL(string: videoImageUrl))
         cell.videoDuration.text = videoDuration
         
-//        cell.videoImage.addShadowEffect()
         return cell
     }
     
