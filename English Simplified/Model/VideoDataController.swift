@@ -74,4 +74,9 @@ class VideoDataController: NSObject {
         let videoData = managedContext.object(with: id)
         videoData.setValue(true, forKey: "isWatched")
     }
+    
+    static func deleteVideo(id: NSManagedObjectID) {
+        let videoData = managedContext.object(with: id)
+        managedContext.delete(videoData)
+    }
 }

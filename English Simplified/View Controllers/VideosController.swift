@@ -111,6 +111,8 @@ class VideosController: UITableViewController {
         let videoImageUrl = videos[indexPath.row].imageUrl
 
         let videoDuration = videos[indexPath.row].duration
+        cell.videoImage.sd_setShowActivityIndicatorView(true)
+        cell.videoImage.sd_setIndicatorStyle(.gray)
         cell.videoImage.sd_setImage(with: URL(string: videoImageUrl))
         cell.videoDuration.text = videoDuration
         
@@ -140,6 +142,11 @@ class VideosController: UITableViewController {
         let delete = UITableViewRowAction(style: .normal,title: "Delete"){
             action, index in
             self.tableView.setEditing(false, animated: true)
+            let id = self.videos[index.row].managedObjectID
+            VideoDataController.deleteVideo(id: id)
+            self.categarizedVideos()
+            self.tableView.deleteRows(at: [index], with: .fade)
+            self.bannerHandler.display(with: NSAttributedString(string: "deleted"), forDuration: 1)
         }
         delete.backgroundColor = UIColor.red
 
